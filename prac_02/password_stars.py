@@ -8,10 +8,10 @@ def get_password():
     while len(password) < MINIMUM_LENGTH:
         print("Invalid password")
         password = input("Type the password: ")
-    the_password(password)
+    have_password(password)
 
 
-def the_password(password):
+def have_password(password):
     asterisks = len(password) * "*"
     print(asterisks)
 
