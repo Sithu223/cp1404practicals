@@ -1,38 +1,27 @@
 """
 CP1404/CP5632 - Practical
-
 """
+
+import random
 
 def main():
     score = float(input("Enter score: "))
-    print(determine_score(score))
-    
+    while score < 0 or score > 100:
+        print("Your score is invalid!")
+        score = float(input("Enter score: "))
+
+    result = determine_score(score)
+    print(result)
+    random_score = random.randint(0, 100)
+    print(f"Random score: {random_score}")
+    random_result = determine_score(random_score)
+    print(random_result)
+
 def determine_score(score):
-    if score < 0 or score > 100:
-        return "Your score is invalid"
-    elif score >= 90:
+    if score >= 90:
         return "Excellent!"
     elif score >= 50:
-        return "Pass!"
-    else:
-        return "Bad!"
-
-main()
-
-# another main function with random
-import random
-def main():
-    score = random.randint(0, 100)
-    print(score)
-    print(determine_result(score))
-
-def determine_result(score):
-    if score < 0 or score > 100:
-        return "Your score is invalid"
-    elif score >= 90:
-        return "Excellent!"
-    elif score >= 50:
-        return "Pass!"
+        return "Passable!"
     else:
         return "Bad!"
 
