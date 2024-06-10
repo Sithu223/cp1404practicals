@@ -15,7 +15,7 @@ Answer the following questions:
 
 """
 
-while:
+try:
     numerator = int(input("Enter the numerator: "))
     denominator = int(input("Enter the denominator: "))
     fraction = numerator / denominator
