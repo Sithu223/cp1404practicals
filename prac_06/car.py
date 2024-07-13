@@ -1,5 +1,6 @@
-"""CP1404/CP5632 Practical - Car class example."""
-
+"""CP1404/CP5632 Practical - Car class example.
+Name = Sithu Hein
+"""
 
 class Car:
     """Represent a Car object."""
