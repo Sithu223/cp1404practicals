@@ -1,6 +1,6 @@
 """
 Estimate = 30 minutes
-Actual =
+Actual = 27 minutes
 """
 
 CURRENT_YEAR = 2022
@@ -33,3 +33,6 @@ class Guitar:
         else:
             return False
 
+    def __lt__(self, other):
+        """Sort the list of guitars by released year."""
+        return self.year < other.year
