@@ -1,6 +1,6 @@
 """
 Estimate = 20 minutes
-Autual =
+Autual = 15 minutes
 """
 
 class ProgrammingLanguage:
