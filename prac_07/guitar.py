@@ -47,3 +47,8 @@ def read_guitars_from_file(filename):
             cost = float(parts[2])
             guitars.append(Guitar(name, year, cost))
     return guitars
+
+def display_guitars(guitars):
+    for guitar in guitars:
+        print(guitar)
+
