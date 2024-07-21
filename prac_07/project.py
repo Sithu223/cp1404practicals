@@ -1,6 +1,6 @@
 """
 Estimate = 20 minutes
-Actual =
+Actual = 25 minutes
 """
 
 class Project:
