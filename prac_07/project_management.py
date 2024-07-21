@@ -32,3 +32,12 @@ def main():
         print(MENU)
         choice = input(">>> ").upper()
     print("Thank you for using custom-built project management software.")
+
+def load_projects(filename):
+    """Read the file, load projects data, and store as a list."""
+    with open(filename, "r") as file:
+        file.readline()
+        for line in file:
+            name, start_date, priority, cost_estimate, completion = line.strip().split("\t")
+            start_date = datetime.datetime.strptime(start_date, "%d/%m/%Y").date()
+            projects.append(Project(name, start_date, int(priority), float(cost_estimate), int(completion)))
