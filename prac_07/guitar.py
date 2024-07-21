@@ -52,3 +52,14 @@ def display_guitars(guitars):
     for guitar in guitars:
         print(guitar)
 
+def main():
+    guitars = read_guitars_from_file('guitars.csv')
+    print("Guitars:")
+    display_guitars(guitars)
+    # Sort guitars by year
+    guitars.sort()
+    print("\nSorted guitars (oldest to newest):")
+    display_guitars(guitars)
+
+if __name__ == "__main__":
+    main()
