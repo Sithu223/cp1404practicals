@@ -1,6 +1,6 @@
 """
 Estimate = 40 minutes
-Actual =
+Actual = 53 minutes
 """
 
 import datetime
@@ -107,4 +107,4 @@ def update_projects():
     selected_project.priority = int(new_priority)
 
 
-
+main()
