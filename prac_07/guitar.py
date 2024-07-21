@@ -16,7 +16,7 @@ class Guitar:
 
     def __str__(self):
         """Return string representation of a Guitar."""
-        return f"{self.name} ({self.year}) : ${self.cost}"
+        return f"{self.name} ({self.year}) : ${self.cost:.2f}"
 
     def __repr__(self):
         """Return string representation of a Guitar."""
@@ -36,3 +36,14 @@ class Guitar:
     def __lt__(self, other):
         """Sort the list of guitars by released year."""
         return self.year < other.year
+
+def read_guitars_from_file(filename):
+    guitars = []
+    with open(filename, 'r') as file:
+        for line in file:
+            parts = line.strip().split(',')
+            name = parts[0]
+            year = int(parts[1])
+            cost = float(parts[2])
+            guitars.append(Guitar(name, year, cost))
+    return guitars
