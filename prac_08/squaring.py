@@ -1,22 +1,22 @@
 """
-CP1404/CP5632 Practical
+CP1404 Practical
 Kivy GUI program to square a number
-Lindsay Ward, IT@JCU
-Started 13/10/2015
+Sithu Hein, IT@JCU
+Started 23/07/2024
 """
 
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 
-__author__ = 'Lindsay Ward'
+__author__ = 'Sithu Hein'
 
 
 class SquareNumberApp(App):
     """ SquareNumberApp is a Kivy App for squaring a number """
     def build(self):
         """ build the Kivy app from the kv file """
-        Window.size = (200, 100)
+        Window.size = (250, 100)
         self.title = "Square Number"
         self.root = Builder.load_file('squaring.kv')
         return self.root
