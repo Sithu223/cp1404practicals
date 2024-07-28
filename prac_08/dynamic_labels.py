@@ -9,6 +9,7 @@ from kivy.lang import Builder
 from kivy.uix.button import Button
 from kivy.properties import StringProperty
 
+
 NEW_COLOUR = (1, 0, 0, 1)  # RGBA for red
 ALTERNATIVE_COLOUR = (1, 0, 1, 1)  # RGBA for magenta
 
