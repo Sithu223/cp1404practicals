@@ -18,3 +18,10 @@ def main():
         score = float(input("Enter score: "))
     print("Thank you")
 
+def determine_score(score):
+    if score >= 90:
+        print("Excellent!")
+    elif score >= 50:
+        print("Passable!")
+    else:
+        print("Bad!")
