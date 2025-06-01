@@ -1,4 +1,5 @@
 MINIMUM_LENGTH = 8
+
 def main():
     password = get_password()
     print_asterisks(password)
