@@ -14,3 +14,7 @@ def main():
         else:
             print("Invalid choice")
         print(MENU)
+        choice = input(">>> ").upper()
+        score = float(input("Enter score: "))
+    print("Thank you")
+
