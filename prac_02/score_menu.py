@@ -25,3 +25,9 @@ def determine_score(score):
         print("Passable!")
     else:
         print("Bad!")
+
+def show_stars(score):
+    print_stars = int(score) * "*"
+    print(print_stars)
+
+main()
