@@ -33,5 +33,5 @@ with open(FILENAME, "w") as out_file:
             price_change = random.uniform(-MAX_DECREASE, 0)
         number_of_days += 1
         price *= (1 + price_change)
-        print(f"On day {number_of_days} price is: ${price:,.2f}")
+        print(f"On day {number_of_days} price is: ${price:,.2f}", file = out_file)
 out_file.close()
