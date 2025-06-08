@@ -11,6 +11,8 @@
 # No, It cannot produce a 4.
 
 # What did you see on line 3?
+# I see the numbers with long decimals as output.
 # What was the smallest number you could have seen, what was the largest?
-#
+# The smallest number is 3.6554952081100414 and the largest number is 4.851705759619277.
+
 # Write code, not a comment, to produce a random number between 1 and 100 inclusive.
