@@ -12,14 +12,11 @@ def main():
     for month in range(1, number_of_months + 1):
         income = float(input(f"Enter income for month {month}: "))
         incomes.append(income)
-
-
-
-    """Display the list of the month's income with cumulative totals."""
     print_income_report(incomes, number_of_months)
 
 
 def print_income_report(incomes, number_of_months):
+    """Display the list of the month's income with cumulative totals."""
     print("\nIncome Report\n-------------")
     total = 0
     for month in range(1, number_of_months + 1):
