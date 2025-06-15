@@ -8,8 +8,7 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = get_data()
-    print(data)
-
+    display_data(data)
 
 def get_data():
     subjects = []
@@ -28,5 +27,9 @@ def get_data():
         print("----------")
     input_file.close()
     return subjects
+
+def display_data(data):
+    """Display data to look good"""
+
 
 main()
