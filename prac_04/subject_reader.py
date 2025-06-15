@@ -12,6 +12,7 @@ def main():
 
 
 def get_data():
+    subjects = []
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
     for line in input_file:
