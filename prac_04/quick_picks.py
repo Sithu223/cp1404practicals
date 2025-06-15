@@ -28,3 +28,5 @@ def display_quick_picks(numbers):
     for number in numbers:
         print("{:2d}".format(number), end=" ")
     print()
+
+main()
