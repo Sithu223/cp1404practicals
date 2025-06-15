@@ -11,3 +11,8 @@ def main():
     for i in range(number_of_quick_picks):
         quick_picks = generate_quick_picks()
         display_quick_picks(quick_picks)
+
+def get_input():
+    number_of_quick_picks = int(input("How many quick picks? "))
+    return number_of_quick_picks
+
