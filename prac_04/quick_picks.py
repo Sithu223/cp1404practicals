@@ -16,3 +16,5 @@ def get_input():
     number_of_quick_picks = int(input("How many quick picks? "))
     return number_of_quick_picks
 
+def generate_quick_picks():
+    numbers = []
