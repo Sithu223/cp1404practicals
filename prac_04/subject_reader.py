@@ -7,11 +7,11 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = load_data()
+    data = get_data()
     print(data)
 
 
-def load_data():
+def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
     for line in input_file:
