@@ -30,6 +30,7 @@ def get_data():
 
 def display_data(data):
     """Display data to look good"""
-
+    for subjects in data:
+        print(f"{subjects[0]} is taught by {subjects[1]} and has {subjects[2]} students.")
 
 main()
