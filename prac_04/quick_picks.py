@@ -1,6 +1,5 @@
 import random
 
-from kivy.input.providers.probesysfs import get_inputs
 
 MIN_VALUE = 1
 MAX_VALUE = 45
@@ -18,3 +17,10 @@ def get_input():
 
 def generate_quick_picks():
     numbers = []
+    while len(numbers) < NUMBERS_PER_LINE:
+        random_number = random.randint(MIN_VALUE, MAX_VALUE)
+        if random_number not in numbers:
+            numbers.append(random_number)
+            numbers.sort()
+    return numbers
+
