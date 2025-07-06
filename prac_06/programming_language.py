@@ -18,3 +18,7 @@ class ProgrammingLanguage:
 
     def __repr__(self):
         return str(self)
+
+    def is_dynamic(self):
+        """Determine whether a language is dynamic_typed."""
+        return self.typing == "Dynamic"
