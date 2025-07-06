@@ -1,6 +1,6 @@
 """
 Estimate = 15 minutes
-Actual =
+Actual = 9 minutes
 """
 
 from prac_06.guitar import Guitar
