@@ -13,9 +13,10 @@ def main():
     my_car.drive(30)
     limo = Car("RangeRover", 100)
     limo.add_fuel(20)
-
+    limo.drive(115)
     print(limo)
     print(f"Car has fuel: {my_car.fuel}")
+    print(f"Car drove: {limo.drive(115)}km.")
     print(my_car)
 
 
