@@ -1,6 +1,6 @@
 """
 Estimate = 15 minutes
-Actual =
+Actual = 15 minutes
 """
 
 class ProgrammingLanguage:
