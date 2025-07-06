@@ -12,3 +12,5 @@ def main():
         cost = float(input("Cost: $"))
         guitar_to_add = Guitar(name, year, cost)
         guitars.append(guitar_to_add)
+        print(guitars)
+        print(f"{guitar_to_add}, added.")
