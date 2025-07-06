@@ -11,3 +11,10 @@ class ProgrammingLanguage:
         self.typing = typing
         self.reflection = reflection
         self.year = year
+
+    def __str__(self):
+        """Return string representation of a ProgrammingLanguage."""
+        return f"{self.language_name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year}"
+
+    def __repr__(self):
+        return str(self)
