@@ -37,4 +37,8 @@ def read_file(filename):
             guitars.append(Guitar(name, year, cost))
     return guitars
 
+def display_guitars(guitars):
+    for guitar in guitars:
+        print(guitar)
+
 main()
