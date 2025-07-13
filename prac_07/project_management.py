@@ -86,3 +86,17 @@ def add_projects():
     completion_percentage = int(input("Percent complete: "))
     project_to_add = Project(name, start_date, priority, cost_estimate, completion_percentage)
     projects.append(project_to_add)
+
+def update_projects():
+    """Update projects such as completion percentage or priority."""
+    for number, project in enumerate(projects, 0):
+        print(number, project)
+    project_choice = int(input("Project choice: "))
+    selected_project = projects[project_choice]
+    print(selected_project)
+    new_percentage = int(input("New percentage: "))
+    selected_project.completion_percentage = new_percentage
+    new_priority = input("New Priority: ")
+    if new_priority == "":
+        new_priority = selected_project.priority
+    selected_project.priority = int(new_priority)
