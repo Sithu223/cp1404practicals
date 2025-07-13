@@ -2,7 +2,7 @@
 
 from prac_06.guitar import Guitar
 def main():
-    guitars = []
+    guitars = read_file('guitars.csv')
     name = input("Name: ").title()
     while name != "":
         year = int(input("Year: "))
@@ -12,6 +12,13 @@ def main():
         print(guitars)
         print(f"{guitar_to_add}, added.")
         name = input("Name: ").title()
+
+    print("\nAll guitars:")
+    display_guitars(guitars)
+
+    guitars.sort()
+    print("\nSorted guitars (oldest to newest):")
+    display_guitars(guitars)
 
     guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
     guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.90))
@@ -40,5 +47,7 @@ def read_file(filename):
 def display_guitars(guitars):
     for guitar in guitars:
         print(guitar)
+
+
 
 main()
