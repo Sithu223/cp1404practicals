@@ -49,3 +49,17 @@ def save_projects(filename):
         for project in projects:
             out_file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t{project.priority}\t"
                            f"{project.cost_estimate}\t{project.completion_percentage}\n"))
+
+def display_projects():
+    """Display sorted incomplete projects and completed projects nicely."""
+    incomplete_projects = [project for project in projects if int(project.completion_percentage) < 100]
+    incomplete_projects.sort()
+    print("Incomplete projects: ")
+    for incomplete_project in incomplete_projects:
+        print(f"{incomplete_project}")
+    complete_projects = [project for project in projects if int(project.completion_percentage) == 100]
+    complete_projects.sort()
+    print("Complete projects: ")
+    for complete_project in complete_projects:
+        print(f"{complete_project}")
+
