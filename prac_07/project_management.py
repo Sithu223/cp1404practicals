@@ -74,3 +74,15 @@ def filter_projects():
     filtered_projects.sort()
     for filtered_project in filtered_projects:
         print(filtered_project)
+
+def add_projects():
+    """Add new projects"""
+    print(f"Let's add a new project")
+    name = input("Name: ")
+    start_date = input("Start date (dd/mm/yy): ")
+    start_date = datetime.datetime.strptime(start_date, "%d/%m/%Y").date()
+    priority = int(input("Priority: "))
+    cost_estimate = float(input("Cost estimate: $"))
+    completion_percentage = int(input("Percent complete: "))
+    project_to_add = Project(name, start_date, priority, cost_estimate, completion_percentage)
+    projects.append(project_to_add)
