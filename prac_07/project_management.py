@@ -1,6 +1,6 @@
 """
 Estimate = 20 minutes
-Actual =
+Actual = 43 minutes
 """
 
 import datetime
@@ -48,7 +48,7 @@ def save_projects(filename):
         out_file.write("Name\tState Date\tPriority\tEstimate\tCompletion\n")
         for project in projects:
             out_file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t{project.priority}\t"
-                           f"{project.cost_estimate}\t{project.completion_percentage}\n"))
+                           f"{project.cost_estimate}\t{project.completion_percentage}\n")
 
 def display_projects():
     """Display sorted incomplete projects and completed projects nicely."""
@@ -100,3 +100,5 @@ def update_projects():
     if new_priority == "":
         new_priority = selected_project.priority
     selected_project.priority = int(new_priority)
+
+main()
