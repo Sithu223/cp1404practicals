@@ -26,4 +26,15 @@ def main():
     else:
         print("No guitars : (Quick, go and buy one!")
 
+def read_file(filename):
+    guitars = []
+    with open(filename, 'r') as file:
+        for line in file:
+            parts = line.strip().split(',')
+            name = parts[0]
+            year = int(parts[1])
+            cost = float(parts[2])
+            guitars.append(Guitar(name, year, cost))
+    return guitars
+
 main()
