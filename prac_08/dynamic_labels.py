@@ -19,3 +19,10 @@ class DynamicWidgetsApp(App):
         super().__init__(**kwargs)
         # basic data (model) example - dictionary of names: phone numbers
         self.name_to_phone = {"Bob Brown": "0414144411", "Cat Cyan": "0441411211", "Oren Ochre": "0432123456"}
+
+    def build(self):
+        """Build the Kivy GUI."""
+        self.title = "Dynamic Widgets"
+        self.root = Builder.load_file('dynamic_labels.kv')
+        self.create_widgets()
+        return self.root
