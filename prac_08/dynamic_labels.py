@@ -37,3 +37,12 @@ class DynamicWidgetsApp(App):
             temp_button.background_color = NEW_COLOUR
             # add the button to the "entries_box" layout widget
             self.root.ids.entries_box.add_widget(temp_button)
+
+    def press_entry(self, instance):
+        """Handle pressing entry buttons."""
+        # get name (dictionary key) from the text of Button we clicked on
+        name = instance.text
+        # change the button's background colour
+        instance.background_color = ALTERNATIVE_COLOUR
+        # update status text
+        self.status_text = f"{name}'s number is {self.name_to_phone[name]}"
