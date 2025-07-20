@@ -26,3 +26,14 @@ class DynamicWidgetsApp(App):
         self.root = Builder.load_file('dynamic_labels.kv')
         self.create_widgets()
         return self.root
+
+    def create_widgets(self):
+        """Create buttons from data and add them to the GUI."""
+        for name in self.name_to_phone:
+            # create a button for each data entry, specifying the text
+            temp_button = Button(text=name)
+            temp_button.bind(on_press=self.press_entry)
+            # set the button's background colour
+            temp_button.background_color = NEW_COLOUR
+            # add the button to the "entries_box" layout widget
+            self.root.ids.entries_box.add_widget(temp_button)
