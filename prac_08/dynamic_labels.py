@@ -46,3 +46,9 @@ class DynamicWidgetsApp(App):
         instance.background_color = ALTERNATIVE_COLOUR
         # update status text
         self.status_text = f"{name}'s number is {self.name_to_phone[name]}"
+
+    def clear_all(self):
+        """Clear all widgets that are children of the "entries_box" layout widget."""
+        self.root.ids.entries_box.clear_widgets()
+
+DynamicWidgetsApp().run()
