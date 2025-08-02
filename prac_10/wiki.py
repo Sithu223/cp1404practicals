@@ -5,3 +5,10 @@ while True:
     search_input = input("Enter a page title or search phrase (or leave blank to exit): ")
     if not search_input:
         break  # Exit the loop if the input is blank
+
+    try:
+        # Fetch the page summary
+        page = wikipedia.page(search_input, auto_suggest=False)  # Disable auto-suggest
+        print("Title:", page.title)
+        print("Summary:", page.summary)
+        print("URL:", page.url)
