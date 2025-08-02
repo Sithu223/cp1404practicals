@@ -22,7 +22,7 @@ def is_long_word(word, length=5):
     >>> is_long_word("Python", 6)
     True
     """
-    return len(word) > length
+    return len(word) >= length
 
 
 def run_tests():
@@ -38,21 +38,24 @@ def run_tests():
     # assert test with custom message,
     # used to see if Car's init method sets the odometer correctly
     # this should pass (no output)
-    car = Car()
-    assert car._odometer == 0, "Car does not set odometer correctly"
+    test_car = Car()
+    assert test_car._odometer == 0, "Car does not set odometer correctly"
 
     # TODO: 2. write assert statements to show if Car sets the fuel correctly
     # Note that Car's __init__ function sets the fuel in one of two ways:
     # using the value passed in or the default
     # You should test both of these
-    car = Car(fuel=10)
+    test_car = Car(fuel=10)
+    assert test_car.fuel == 10
+    test_car = Car()
+    assert test_car.fuel == 0
 
 
 run_tests()
 
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
-# doctest.testmod()
+doctest.testmod()
 
 # TODO: 4. Fix the failing is_long_word function
 # (Don't change the tests, change the function!)
@@ -66,3 +69,11 @@ run_tests()
 # and one more that you decide is a useful test.
 # Run your doctests and watch the tests fail.
 # Then write the body of the function so that the tests pass.
+def format_sentence(phrase):
+    sentence = phrase.capitalize()
+    if not sentence.endswith('.'):
+        sentence += '.'
+    return sentence
+
+run_tests()
+doctest.testmod()
