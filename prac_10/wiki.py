@@ -14,3 +14,6 @@ while True:
         print("URL:", page.url)
     except wikipedia.exceptions.DisambiguationError as e:
         print("Disambiguation Error: The search phrase may refer to multiple pages. Please provide a more specific input.")
+
+    except wikipedia.exceptions.PageError as e:
+        print("Page Error: The page could not be found.")
