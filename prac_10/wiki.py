@@ -12,3 +12,5 @@ while True:
         print("Title:", page.title)
         print("Summary:", page.summary)
         print("URL:", page.url)
+    except wikipedia.exceptions.DisambiguationError as e:
+        print("Disambiguation Error: The search phrase may refer to multiple pages. Please provide a more specific input.")
